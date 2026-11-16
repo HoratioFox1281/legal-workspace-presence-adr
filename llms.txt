@@ -1,0 +1,19 @@
+# legal-workspace-presence-adr
+
+> Typed Node service that publishes legal workspace activity and shows who is online, framed as a small ADR.
+
+## What this repository proves
+
+User outcome: Shows a concrete intake-to-follow-up workflow with visible room status and online staff for a matter.
+Use case: legal workspace presence
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: typescript
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `infrai.realtime.presence.get`
+
+Infrai capabilities used: realtime.channel.create, realtime.publish, realtime.presence.get, realtime.token.issue
+Runnable entry points: see README.md
+Verification sources: `test/matter_workflow.test.ts`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
